@@ -1,12 +1,10 @@
 import Vue from 'vue'
-import App from './components/App'
 import dmx from 'dmx-api'
+import App from './components/App'
 import store from './store'
 import router from './router'
 
 // 1) Init dmx library
-// The dmx library must be inited *before* the dmx-webclient component is instantiated.
-// The dmx-webclient component relies on the "typeCache" store module as registered by dmx.init(). ### TODO: still true?
 const dmxReady = dmx.init({store})
 
 // 2) Create Vue root instance
